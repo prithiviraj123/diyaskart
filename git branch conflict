@@ -1,0 +1,269 @@
+prithivi@ubuntu:~$ git clone https://github.com/prithiviraj123/flipkart123.git
+Cloning into 'flipkart123'...
+warning: You appear to have cloned an empty repository.
+prithivi@ubuntu:~$ cd 
+prithivi@ubuntu:~$ ls
+desktop        Documents         kon.java     Public
+Desktop        Downloads         learning     relogin
+devops1        examples.desktop  Music        SK40C_APDS9960-GestureSensor
+devopsproject  flipkart123       NewDir       snap
+docker         git               number.java  source
+docker--help   gitlearning       pic16f       Templates
+dockerimages   jk.java           pic18f       Videos
+dockerimGES    jungle            pic18f-
+dockers        kj.java           Pictures
+prithivi@ubuntu:~$ cd flipkart123
+prithivi@ubuntu:~/flipkart123$ vim payment.java
+prithivi@ubuntu:~/flipkart123$ vim git.txt
+prithivi@ubuntu:~/flipkart123$ vim
+prithivi@ubuntu:~/flipkart123$ vim login.java
+prithivi@ubuntu:~/flipkart123$ git add payment.java git.txt login.java
+prithivi@ubuntu:~/flipkart123$ git commit -m  payment.java git.txt login.java "add new files"
+error: pathspec 'add new files' did not match any file(s) known to git.
+prithivi@ubuntu:~/flipkart123$ git commit payment.java git.txt login.java -m "add new files"
+[master (root-commit) 4d067c4] add new files
+ 3 files changed, 21 insertions(+)
+ create mode 100644 git.txt
+ create mode 100644 login.java
+ create mode 100644 payment.java
+prithivi@ubuntu:~/flipkart123$ git status
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+prithivi@ubuntu:~/flipkart123$ git log
+commit 4d067c443ad1c149f5912908adb3d7be048d29bd (HEAD -> master)
+Author: R Prithiviraj <itsprithiv@gmail.com>
+Date:   Mon Sep 30 11:41:32 2019 +0530
+
+    add new files
+prithivi@ubuntu:~/flipkart123$ git push
+Username for 'https://github.com': prithiviraj123
+Password for 'https://prithiviraj123@github.com': 
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 584 bytes | 292.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/prithiviraj123/flipkart123.git
+ * [new branch]      master -> master
+prithivi@ubuntu:~/flipkart123$ git branch
+* master
+prithivi@ubuntu:~/flipkart123$ git branch dev_1.2.3
+prithivi@ubuntu:~/flipkart123$ git branch
+  dev_1.2.3
+* master
+prithivi@ubuntu:~/flipkart123$ git checkout dev_1.2.3
+Switched to branch 'dev_1.2.3'
+prithivi@ubuntu:~/flipkart123$ ls
+git.txt  login.java  payment.java
+prithivi@ubuntu:~/flipkart123$ vim payment.java
+prithivi@ubuntu:~/flipkart123$ git status
+On branch dev_1.2.3
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   payment.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+prithivi@ubuntu:~/flipkart123$ git add payment.java 
+prithivi@ubuntu:~/flipkart123$ git commit payment.java -m "to change a value "
+[dev_1.2.3 febc277] to change a value
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+prithivi@ubuntu:~/flipkart123$ git s
+shortlog      show-branch   stash         submodule     
+show          stage         status        subtree       
+prithivi@ubuntu:~/flipkart123$ git s
+shortlog      show-branch   stash         submodule     
+show          stage         status        subtree       
+prithivi@ubuntu:~/flipkart123$ git status
+On branch dev_1.2.3
+nothing to commit, working tree clean
+prithivi@ubuntu:~/flipkart123$ git log
+commit febc277fa4c348b1107058f6b86d230b70da300c (HEAD -> dev_1.2.3)
+Author: R Prithiviraj <itsprithiv@gmail.com>
+Date:   Mon Sep 30 11:44:21 2019 +0530
+
+    to change a value
+
+commit 4d067c443ad1c149f5912908adb3d7be048d29bd (origin/master, master)
+Author: R Prithiviraj <itsprithiv@gmail.com>
+Date:   Mon Sep 30 11:41:32 2019 +0530
+
+    add new files
+prithivi@ubuntu:~/flipkart123$ git branch
+* dev_1.2.3
+  master
+prithivi@ubuntu:~/flipkart123$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+prithivi@ubuntu:~/flipkart123$ vim payment.java 
+prithivi@ubuntu:~/flipkart123$ git add payment.java 
+prithivi@ubuntu:~/flipkart123$ git commit payment.java -m "to change the value fa"
+[master 02d9a40] to change the value fa
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+prithivi@ubuntu:~/flipkart123$ git branch 
+  dev_1.2.3
+* master
+prithivi@ubuntu:~/flipkart123$ git checkout dev_1.2.3
+Switched to branch 'dev_1.2.3'
+prithivi@ubuntu:~/flipkart123$ git push
+fatal: The current branch dev_1.2.3 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin dev_1.2.3
+
+prithivi@ubuntu:~/flipkart123$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+prithivi@ubuntu:~/flipkart123$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 288 bytes | 288.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/prithiviraj123/flipkart123.git
+   4d067c4..02d9a40  master -> master
+prithivi@ubuntu:~/flipkart123$ git checkout dev_1.2.3 
+Switched to branch 'dev_1.2.3'
+prithivi@ubuntu:~/flipkart123$ git status
+On branch dev_1.2.3
+nothing to commit, working tree clean
+prithivi@ubuntu:~/flipkart123$ git log
+commit febc277fa4c348b1107058f6b86d230b70da300c (HEAD -> dev_1.2.3)
+Author: R Prithiviraj <itsprithiv@gmail.com>
+Date:   Mon Sep 30 11:44:21 2019 +0530
+
+    to change a value
+
+commit 4d067c443ad1c149f5912908adb3d7be048d29bd
+Author: R Prithiviraj <itsprithiv@gmail.com>
+Date:   Mon Sep 30 11:41:32 2019 +0530
+
+    add new files
+prithivi@ubuntu:~/flipkart123$ git push
+fatal: The current branch dev_1.2.3 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin dev_1.2.3
+
+prithivi@ubuntu:~/flipkart123$ git push origin dev_1.2.3
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 287 bytes | 287.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'dev_1.2.3' on GitHub by visiting:
+remote:      https://github.com/prithiviraj123/flipkart123/pull/new/dev_1.2.3
+remote: 
+To https://github.com/prithiviraj123/flipkart123.git
+ * [new branch]      dev_1.2.3 -> dev_1.2.3
+prithivi@ubuntu:~/flipkart123$ got branch
+
+Command 'got' not found, but there are 17 similar ones.
+
+prithivi@ubuntu:~/flipkart123$ git branch
+* dev_1.2.3
+  master
+prithivi@ubuntu:~/flipkart123$ git log
+commit febc277fa4c348b1107058f6b86d230b70da300c (HEAD -> dev_1.2.3, origin/dev_1.2.3)
+Author: R Prithiviraj <itsprithiv@gmail.com>
+Date:   Mon Sep 30 11:44:21 2019 +0530
+
+    to change a value
+
+commit 4d067c443ad1c149f5912908adb3d7be048d29bd
+Author: R Prithiviraj <itsprithiv@gmail.com>
+Date:   Mon Sep 30 11:41:32 2019 +0530
+
+    add new files
+prithivi@ubuntu:~/flipkart123$ git remote -v
+origin	https://github.com/prithiviraj123/flipkart123.git (fetch)
+origin	https://github.com/prithiviraj123/flipkart123.git (push)
+prithivi@ubuntu:~/flipkart123$ git branch
+* dev_1.2.3
+  master
+prithivi@ubuntu:~/flipkart123$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+prithivi@ubuntu:~/flipkart123$ git merge dev_1.2.3 
+Auto-merging payment.java
+CONFLICT (content): Merge conflict in payment.java
+Automatic merge failed; fix conflicts and then commit the result.
+prithivi@ubuntu:~/flipkart123$ git add payment.java 
+prithivi@ubuntu:~/flipkart123$ git commit -m payment.java " the value of a is 40"
+fatal: cannot do a partial commit during a merge.
+prithivi@ubuntu:~/flipkart123$ git commit -m  " the value of a is 40"
+[master 47627e2]  the value of a is 40
+prithivi@ubuntu:~/flipkart123$ git branch 
+  dev_1.2.3
+* master
+prithivi@ubuntu:~/flipkart123$ vim payment.java 
+prithivi@ubuntu:~/flipkart123$ git commit -m " changed"
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+	modified:   payment.java
+
+no changes added to commit
+prithivi@ubuntu:~/flipkart123$ git add payment.java 
+prithivi@ubuntu:~/flipkart123$ git startus
+git: 'startus' is not a git command. See 'git --help'.
+
+The most similar command is
+	status
+prithivi@ubuntu:~/flipkart123$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   payment.java
+
+prithivi@ubuntu:~/flipkart123$ git commit -m "changed"
+[master 65e4a45] changed
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+prithivi@ubuntu:~/flipkart123$ git log
+commit 65e4a451f62cabaf642e14bd7a6d210a4b1299b4 (HEAD -> master)
+Author: R Prithiviraj <itsprithiv@gmail.com>
+Date:   Mon Sep 30 12:19:42 2019 +0530
+
+    changed
+
+commit 47627e27fd10cf2553455ae99ce39606448d7034
+Merge: 02d9a40 febc277
+Author: R Prithiviraj <itsprithiv@gmail.com>
+Date:   Mon Sep 30 12:17:24 2019 +0530
+
+     the value of a is 40
+
+commit 02d9a404d8468d560986aa50140095a155921f41 (origin/master)
+Author: R Prithiviraj <itsprithiv@gmail.com>
+Date:   Mon Sep 30 11:46:06 2019 +0530
+
+    to change the value fa
+
+commit febc277fa4c348b1107058f6b86d230b70da300c (origin/dev_1.2.3, dev_1.2.3)
+Author: R Prithiviraj <itsprithiv@gmail.com>
+Date:   Mon Sep 30 11:44:21 2019 +0530
+
+    to change a value
+
+commit 4d067c443ad1c149f5912908adb3d7be048d29bd
+Author: R Prithiviraj <itsprithiv@gmail.com>
+Date:   Mon Sep 30 11:41:32 2019 +0530
+
+    add new files
+prithivi@ubuntu:~/flipkart123$ ^C
+prithivi@ubuntu:~/flipkart123$ 
+

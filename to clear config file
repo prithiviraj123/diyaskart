@@ -1,0 +1,147 @@
+prithivi@ubuntu:~/myntra$ git push
+remote: Permission to prithiviraj123/myntra.git denied to senthilkumar94.
+fatal: unable to access 'https://github.com/prithiviraj123/myntra.git/': The requested URL returned error: 403
+prithivi@ubuntu:~/myntra$ git config --global --unset-all user.name
+prithivi@ubuntu:~/myntra$ git config --global --unset-all user.email
+prithivi@ubuntu:~/myntra$ git config --list
+user.mail=itsprithiv@gmail.com
+credential.helper=cache
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/prithiviraj123/myntra.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+prithivi@ubuntu:~/myntra$ git config --global  user.email "itsprithiv@gmail.com"
+prithivi@ubuntu:~/myntra$ git config --global  user.name "Prithiviraj.R"
+prithivi@ubuntu:~/myntra$ git config --list
+user.mail=itsprithiv@gmail.com
+user.email=itsprithiv@gmail.com
+user.name=Prithiviraj.R
+credential.helper=cache
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/prithiviraj123/myntra.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+prithivi@ubuntu:~/myntra$ CD
+CD: command not found
+prithivi@ubuntu:~/myntra$ USER_NAME/. gitconfig
+bash: USER_NAME/.: No such file or directory
+prithivi@ubuntu:~/myntra$ $USER_NAME/. gitconfig
+bash: /.: Is a directory
+prithivi@ubuntu:~/myntra$ git config credential.helper cache
+prithivi@ubuntu:~/myntra$ git push
+remote: Permission to prithiviraj123/myntra.git denied to senthilkumar94.
+fatal: unable to access 'https://github.com/prithiviraj123/myntra.git/': The requested URL returned error: 403
+prithivi@ubuntu:~/myntra$ git status 
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+prithivi@ubuntu:~/myntra$ git log
+commit dceef9c8470592b759267593b12f043faf6abb5a (HEAD -> master, origin/master)
+Author: Prithiviraj.R <itsprithiv@gmail.com>
+Date:   Sat Oct 5 15:39:43 2019 +0530
+
+    to edit
+
+commit ab442b918f2075a0a3f737e9e899be06f2b70fa5
+Author: Prithiviraj.R <itsprithiv@gmail.com>
+Date:   Sat Oct 5 15:35:39 2019 +0530
+
+    to create
+
+commit 97f52e97678460574a458e97efda624e9563e6c0
+Author: Prithiviraj.R <itsprithiv@gmail.com>
+Date:   Tue Oct 1 11:43:55 2019 +0530
+
+     to edit some lines
+
+commit 682acb14b2c1b4d5c260aeaf4d2b791aca3e8e1d
+Author: Prithiviraj.R <itsprithiv@gmail.com>
+Date:   Tue Oct 1 11:42:11 2019 +0530
+
+    to add some names
+
+commit 4f6f2808d775d3ba707cc1143afbb6b59aee43ee
+Author: Prithiviraj.R <itsprithiv@gmail.com>
+Date:   Tue Oct 1 11:35:43 2019 +0530
+
+    to create file
+
+commit 88079d5d3f729529095f9b76c7935a963d4af0ed
+Author: R Prithiviraj <itsprithiv@gmail.com>
+Date:   Mon Sep 30 15:46:12 2019 +0530
+
+    to create file
+prithivi@ubuntu:~/myntra$ git push
+remote: Permission to prithiviraj123/myntra.git denied to senthilkumar94.
+fatal: unable to access 'https://github.com/prithiviraj123/myntra.git/': The requested URL returned error: 403
+prithivi@ubuntu:~/myntra$ git config --global --unset credential.helper 
+prithivi@ubuntu:~/myntra$ git config --global --system --unset credential.helper 
+error: only one config file at a time.
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+
+prithivi@ubuntu:~/myntra$ git config --global  credential.helper manager
+prithivi@ubuntu:~/myntra$ git config --global  credential.helper store
+prithivi@ubuntu:~/myntra$ git config --list
+user.mail=itsprithiv@gmail.com
+user.email=itsprithiv@gmail.com
+user.name=Prithiviraj.R
+credential.helper=store
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/prithiviraj123/myntra.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+credential.helper=cache
+prithivi@ubuntu:~/myntra$ git push
+Everything up-to-date
+prithivi@ubuntu:~/myntra$ git --version^C
+prithivi@ubuntu:~/myntra$ 
+

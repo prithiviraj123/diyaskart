@@ -1,0 +1,327 @@
+prithivi@ubuntu:~$ mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-webapp -DarchetypeVersion=1.4
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] >>> maven-archetype-plugin:3.1.2:generate (default-cli) > generate-sources @ standalone-pom >>>
+[INFO] 
+[INFO] <<< maven-archetype-plugin:3.1.2:generate (default-cli) < generate-sources @ standalone-pom <<<
+[INFO] 
+[INFO] 
+[INFO] --- maven-archetype-plugin:3.1.2:generate (default-cli) @ standalone-pom ---
+[INFO] Generating project in Interactive mode
+[INFO] Archetype repository not defined. Using the one from [org.apache.maven.archetypes:maven-archetype-webapp:1.4] found in catalog remote
+Define value for property 'groupId': diyakart
+Define value for property 'artifactId': diyakart
+Define value for property 'version' 1.0-SNAPSHOT: : 
+Define value for property 'package' diyakart: : 
+Confirm properties configuration:
+groupId: diyakart
+artifactId: diyakart
+version: 1.0-SNAPSHOT
+package: diyakart
+ Y: : 
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Archetype: maven-archetype-webapp:1.4
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: groupId, Value: diyakart
+[INFO] Parameter: artifactId, Value: diyakart
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] Parameter: package, Value: diyakart
+[INFO] Parameter: packageInPathFormat, Value: diyakart
+[INFO] Parameter: package, Value: diyakart
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] Parameter: groupId, Value: diyakart
+[INFO] Parameter: artifactId, Value: diyakart
+[INFO] Project created from Archetype in dir: /home/prithivi/diyakart
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:04 min
+[INFO] Finished at: 2019-10-23T12:51:51+05:30
+[INFO] ------------------------------------------------------------------------
+prithivi@ubuntu:~$ cd diyakart
+prithivi@ubuntu:~/diyakart$ ls
+pom.xml  src
+prithivi@ubuntu:~/diyakart$ mvn validate
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< diyakart:diyakart >--------------------------
+[INFO] Building diyakart Maven Webapp 1.0-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.111 s
+[INFO] Finished at: 2019-10-23T12:52:16+05:30
+[INFO] ------------------------------------------------------------------------
+prithivi@ubuntu:~/diyakart$ vim pom.xml
+prithivi@ubuntu:~/diyakart$ cd src
+prithivi@ubuntu:~/diyakart/src$ ls
+main
+prithivi@ubuntu:~/diyakart/src$ cd main
+prithivi@ubuntu:~/diyakart/src/main$ ls
+webapp
+prithivi@ubuntu:~/diyakart/src/main$ cd webapp
+prithivi@ubuntu:~/diyakart/src/main/webapp$ ls
+index.jsp  WEB-INF
+prithivi@ubuntu:~/diyakart/src/main/webapp$ cd
+prithivi@ubuntu:~$ 
+prithivi@ubuntu:~$ cd
+prithivi@ubuntu:~$ cd diyakart
+prithivi@ubuntu:~/diyakart$ tree .
+.
+|-- pom.xml
+`-- src
+    `-- main
+        `-- webapp
+            |-- WEB-INF
+            |   `-- web.xml
+            `-- index.jsp
+
+4 directories, 3 files
+prithivi@ubuntu:~/diyakart$ mvn compile
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< diyakart:diyakart >--------------------------
+[INFO] Building diyakart 1.0-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ diyakart ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/prithivi/diyakart/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ diyakart ---
+[INFO] No sources to compile
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.828 s
+[INFO] Finished at: 2019-10-23T12:54:58+05:30
+[INFO] ------------------------------------------------------------------------
+prithivi@ubuntu:~/diyakart$ tree .
+.
+|-- pom.xml
+`-- src
+    `-- main
+        `-- webapp
+            |-- WEB-INF
+            |   `-- web.xml
+            `-- index.jsp
+
+4 directories, 3 files
+prithivi@ubuntu:~/diyakart$ mvn test
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< diyakart:diyakart >--------------------------
+[INFO] Building diyakart 1.0-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ diyakart ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/prithivi/diyakart/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ diyakart ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ diyakart ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/prithivi/diyakart/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ diyakart ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ diyakart ---
+[INFO] No tests to run.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.091 s
+[INFO] Finished at: 2019-10-23T12:55:13+05:30
+[INFO] ------------------------------------------------------------------------
+prithivi@ubuntu:~/diyakart$ mvn package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< diyakart:diyakart >--------------------------
+[INFO] Building diyakart 1.0-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ diyakart ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/prithivi/diyakart/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ diyakart ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ diyakart ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/prithivi/diyakart/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ diyakart ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ diyakart ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-war-plugin:3.2.2:war (default-war) @ diyakart ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [diyakart] in [/home/prithivi/diyakart/target/diyakart]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/home/prithivi/diyakart/src/main/webapp]
+[INFO] Webapp assembled in [32 msecs]
+[INFO] Building war: /home/prithivi/diyakart/target/diyakart.war
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.766 s
+[INFO] Finished at: 2019-10-23T12:55:27+05:30
+[INFO] ------------------------------------------------------------------------
+prithivi@ubuntu:~/diyakart$ tree .
+.
+|-- pom.xml
+|-- src
+|   `-- main
+|       `-- webapp
+|           |-- WEB-INF
+|           |   `-- web.xml
+|           `-- index.jsp
+`-- target
+    |-- diyakart
+    |   |-- META-INF
+    |   |-- WEB-INF
+    |   |   |-- classes
+    |   |   `-- web.xml
+    |   `-- index.jsp
+    |-- diyakart.war
+    `-- maven-archiver
+        `-- pom.properties
+
+10 directories, 7 files
+prithivi@ubuntu:~$ cd diyakart
+prithivi@ubuntu:~/diyakart$ mvn package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< diyakart:diyakart >--------------------------
+[INFO] Building diyakart 1.0-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ diyakart ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/prithivi/diyakart/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ diyakart ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ diyakart ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/prithivi/diyakart/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ diyakart ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ diyakart ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-war-plugin:3.2.2:war (default-war) @ diyakart ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [diyakart] in [/home/prithivi/diyakart/target/diyakart]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/home/prithivi/diyakart/src/main/webapp]
+[INFO] Webapp assembled in [23 msecs]
+[INFO] Building war: /home/prithivi/diyakart/target/diyakart.war
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.807 s
+[INFO] Finished at: 2019-10-23T12:58:41+05:30
+[INFO] ------------------------------------------------------------------------
+prithivi@ubuntu:~/diyakart$ 
+prithivi@ubuntu:~$ cd distros
+prithivi@ubuntu:~/distros$ cd apache-tomcat-8.5.47/
+prithivi@ubuntu:~/distros/apache-tomcat-8.5.47$ ls
+bin  BUILDING.txt  conf  CONTRIBUTING.md  lib  LICENSE  logs  NOTICE  README.md  RELEASE-NOTES  RUNNING.txt  temp  webapps  work
+prithivi@ubuntu:~/distros/apache-tomcat-8.5.47$ cd bin
+prithivi@ubuntu:~/distros/apache-tomcat-8.5.47/bin$ ./startup.sh
+Using CATALINA_BASE:   /home/prithivi/distros/apache-tomcat-8.5.47
+Using CATALINA_HOME:   /home/prithivi/distros/apache-tomcat-8.5.47
+Using CATALINA_TMPDIR: /home/prithivi/distros/apache-tomcat-8.5.47/temp
+Using JRE_HOME:        /home/prithivi/distros/jdk1.8.0_231
+Using CLASSPATH:       /home/prithivi/distros/apache-tomcat-8.5.47/bin/bootstrap.jar:/home/prithivi/distros/apache-tomcat-8.5.47/bin/tomcat-juli.jar
+Tomcat started.
+prithivi@ubuntu:~/distros/apache-tomcat-8.5.47/bin$ 
+
+note: copy the war file and paste the war file in apache tomcat webapp file 
+open the browser and give localhost:8080/diyakart
+important (https://maven.apache.org/archetypes/maven-archetype-webapp/)
+
+
+ANOTHER METHOD
+rithivi@ubuntu:~$ cd diyakart
+prithivi@ubuntu:~/diyakart$ mvn install
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< diyakart:diyakart >--------------------------
+[INFO] Building diyakart 1.0-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-install-plugin/2.5.2/maven-install-plugin-2.5.2.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-install-plugin/2.5.2/maven-install-plugin-2.5.2.pom (6.4 kB at 3.7 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/25/maven-plugins-25.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/25/maven-plugins-25.pom (9.6 kB at 17 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-install-plugin/2.5.2/maven-install-plugin-2.5.2.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-install-plugin/2.5.2/maven-install-plugin-2.5.2.jar (33 kB at 50 kB/s)
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ diyakart ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/prithivi/diyakart/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ diyakart ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ diyakart ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/prithivi/diyakart/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ diyakart ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ diyakart ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-war-plugin:3.2.2:war (default-war) @ diyakart ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [diyakart] in [/home/prithivi/diyakart/target/diyakart]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/home/prithivi/diyakart/src/main/webapp]
+[INFO] Webapp assembled in [23 msecs]
+[INFO] Building war: /home/prithivi/diyakart/target/diyakart.war
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ diyakart ---
+Downloading from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.6/commons-codec-1.6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.6/commons-codec-1.6.pom (11 kB at 24 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.4/maven-shared-utils-0.4.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.4/maven-shared-utils-0.4.pom (4.0 kB at 7.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.15/plexus-utils-3.0.15.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.15/plexus-utils-3.0.15.pom (3.1 kB at 6.3 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.6/commons-codec-1.6.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.15/plexus-utils-3.0.15.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.4/maven-shared-utils-0.4.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.4/maven-shared-utils-0.4.jar (155 kB at 168 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.15/plexus-utils-3.0.15.jar (239 kB at 140 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.6/commons-codec-1.6.jar (233 kB at 117 kB/s)
+[INFO] Installing /home/prithivi/diyakart/target/diyakart.war to /home/prithivi/.m2/repository/diyakart/diyakart/1.0-SNAPSHOT/diyakart-1.0-SNAPSHOT.war
+[INFO] Installing /home/prithivi/diyakart/pom.xml to /home/prithivi/.m2/repository/diyakart/diyakart/1.0-SNAPSHOT/diyakart-1.0-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.776 s
+[INFO] Finished at: 2019-10-23T13:22:44+05:30
+[INFO] ------------------------------------------------------------------------
+prithivi@ubuntu:~/diyakart$ 
+
+
+
+
+
+
