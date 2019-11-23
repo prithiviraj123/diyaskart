@@ -32,10 +32,10 @@
 
 		<div id="tabs">
 			<ul>
-			<li><a href="#tabs-1">JENKINS</a></li>
-				<li><a href="#tabs-2">DOCKER</a></li>
-				<li><a href="#tabs-3">ANSIBLE</a></li>
-				<li><a href="#tabs-4">KUBERNATES</a></li>
+			<li><a href="#tabs-1">fashions</a></li>
+				<li><a href="#tabs-2">electronics</a></li>
+				<li><a href="#tabs-3">groceries</a></li>
+				<li><a href="#tabs-4">mobiles</a></li>
 			</ul>
 			<div id="tabs-1">
 				<p>Jenkins is a powerful application that allows continuous
@@ -101,15 +101,15 @@
 					has to choose Chef or Puppet.</p>
 			</div>
 			<div id="tabs-4">
-				<p>KUBERNATES TOPIC WILL UPDATE SOON</p>
-				<p>SERVER MAINTENANCE</p>
+				<p>Motorola</p>
+				<p>Apple</p>
 			</div>
 		</div>
 
 	</div >
 
 	<div class="container">
-		<footer> Copyright &copy; DIYAKART RETAILING SERVICE PRIVATE LIMITED</footer>
+		<footer> Copyright &copy; gamutgurus software services Pvt. Ltd. </footer>
 	</div>
 
 </body>
