@@ -4,5 +4,5 @@ for i in `cat IPs.txt`
 do
 	echo "Adding $i to Load Balancer.."
 done
-	echo "LB set up done! Use 'www.flipkart-qa.com' to access the environment"
+	echo "LB set up done! Use 'www.diyakart-qa.com' to access the environment"
 
