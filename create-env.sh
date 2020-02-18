@@ -7,7 +7,7 @@ do
 	echo "=============================="
     echo "Creating  diyasskart$i container.."
     sleep 1
-    docker run --name diyasskart$i -d -it prithiviraj123/ajax-tech2 /bin/bash
+    docker run --name diyasskart$i -d -it prithiviraj123/ajax-tech3 /bin/bash
     echo "diyasskart$i container has been created!"
 	echo "=============================="
 done
